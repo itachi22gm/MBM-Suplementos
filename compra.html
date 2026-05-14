@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MBM Suplementos - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .checkout-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+        .box { background: var(--card-bg); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Finalizar sua Compra</h2>
+        
+        <div class="checkout-layout">
+            <div class="box">
+                <form action="finalizacao.html" method="GET">
+                    <h3>1. Endereço de Entrega</h3>
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label>Rua e Número</label>
+                        <input type="text" placeholder="Av. Paulista, 1000 - Apto 22" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CEP</label>
+                        <input type="text" placeholder="00000-000" required>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem;">2. Forma de Pagamento</h3>
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <select required>
+                            <option value="pix">Pix (Aprovação na hora)</option>
+                            <option value="cartao">Cartão de Crédito</option>
+                            <option value="boleto">Boleto Bancário</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Confirmar Pedido</button>
+                </form>
+            </div>
+            
+            <div class="box" style="height: fit-content;">
+                <h3>Resumo</h3>
+                <p style="display:flex; justify-content:space-between; margin: 1rem 0;">
+                    <span>1x Whey Protein</span>
+                    <span>R$ 159,90</span>
+                </p>
+                <hr style="border:0; border-top: 1px solid #dee2e6; margin-bottom: 1rem;">
+                <h4>Total: <span style="color:var(--success-color)">R$ 159,90</span></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
