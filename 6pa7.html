@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>6PA7 -Bussines</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #5b22a1;
+    color: #000000;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #4b2c73, #7b3fe4);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #463c3c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* SECTIONS */
+section {
+    padding: 25px;
+    max-width: 1000px;
+    margin: 25px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+
+h2 {
+    color: #060a8b;
+    margin-bottom: 10px;
+}
+
+/* LISTA */
+ul li {
+    margin-bottom: 8px;
+}
+
+/* BOTÃO */
+.botao-comprar {
+    display: inline-block;
+    background: linear-gradient(30009000deg, #382b85, #9b59b6);
+    color: white;
+    padding: 12px 24px;
+    margin-top: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(136, 110, 187, 0.4);
+}
+
+.botao-comprar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #050405, #9e93a3);
+}
+
+/* IMAGEM */
+.destque-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* CONTATO */
+.contato p {
+    margin: 6px 0;
+}
+
+/* FOOTER */
+footer {
+    background: #2a2a2a;
+    color: #fdfdff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>6PA7 - Bussines</h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#vendas">Vendas</a>
+            <a href="#contato">Contato</a>
+
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bem-vindo à 6PA7 Bussines!
+</a>
+</h2>
+        <p>Bem-vindo à 6PA7 Bussines!
+É com grande satisfação que recebemos sua visita e o convidamos a conhecer mais sobre a nossa empresa, dedicada à produção e comercialização de pazinhas de alta qualidade. Nosso compromisso é oferecer produtos que atendam às expectativas de nossos clientes, promovendo diversão, praticidade e segurança em cada item que entregamos.
+    </section>
+
+    <section id="objetivos">
+        <h2>Objetivos</h2>
+        <ul>
+            <li>Criar pás de altas tecnologias, e ótimas qualidades.</li>
+            <li>Oferecer um produto de qualidade para que nossos clientes voltem a comprar e indicarem para outros.</li>
+            <li>Melhorar a fabricação das pazinhas, aprendendo técnicas de produção mais eficientes..</li>
+            <li> Desenvolver novas ideias para personalizar e diferenciar nossas pazinhas no mercado.</li>
+        </ul>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma empresa que priorizamos ideias e custo-beneficio para nossos clientes. Nosso principal objetivo não é bater recordes de 10mil pás vendidas, e sim poder dormir em paz sabendo que temos clientes satisfeitos.   </p>
+    </section>
+
+    <section id="vendas">
+        <h2>Vendas</h2>
+        <p><strong>Produto:</strong> Pá portátil, com materiais de qualidade e resistente.</p>
+        <p><strong>Valor:</strong> R$ 46,00 Cada.</p>
+        <p><strong>Pagamentos:</strong> Compras acima de 51 unidades, tera desconto conforme mais compras.  </strong> </p>
+        <a class="botao-comprar" href="#contato"> Realizar compra</a>
+    </section>
+    >
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <p>Telefone: (12)992113007</p>
+        <p>E-mail: 6pa7bussines@senai.com</p>
+        <p>Endereço: Senai Elias Miguel Hadadd  </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 6PA7 - Todos os direitos reservados a Grupo 6</p>
+    </footer>
+</body>
+</html>
