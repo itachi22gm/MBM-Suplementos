@@ -1,0 +1,247 @@
+/* ==========================================================================
+   MBM SUPLEMENTOS - ESTILIZAÇÃO EXCLUSIVA DA TELA DE LOGIN / CADASTRO
+   ========================================================================== */
+
+:root {
+    /* Paleta de Cores Fitness / Energy */
+    --bg-principal: #0b0f19;       /* Preto Carbono Profundo (Fundo da página) */
+    --bg-card: #171e30;            /* Grafite Escuro Azulado (Fundo do formulário) */
+    --cor-destaque: #f01a1a;        /* Vermelho Adrenalina / Força (Ação principal) */
+    --cor-destaque-hover: #ff3333;  /* Vermelho Vibrante para Feedback Visual */
+    --cor-texto: #f8fafc;           /* Branco Puro para máxima leitura */
+    --cor-mutada: #94a3b8;          /* Cinza Fosco para rótulos e subtextos */
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- RESET DE PÁGINA --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- TOPO / HEADER --- */
+header {
+    background-color: #05070c;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--cor-destaque);
+}
+
+.btn-cart {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: var(--transicao);
+}
+
+.btn-cart:hover {
+    background: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 20px rgba(240, 26, 26, 0.4);
+}
+
+/* --- CONTAINER CENTRAL DE AUTENTICAÇÃO --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-container {
+    display: flex;
+    background: var(--bg-card);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Caixas de Formulário (Lado Esquerdo e Lado Direito) */
+.auth-box {
+    flex: 1;
+    padding: 3.5rem 3rem;
+}
+
+/* Diferenciação sutil para o lado do Login */
+.auth-box:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.15); /* Fundo "blackout" para dar contraste */
+}
+
+.auth-box h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+    color: #ffffff; /* Correção: Texto sempre branco visível */
+}
+
+.auth-subtitle {
+    color: var(--cor-mutada);
+    font-size: 0.85rem;
+    margin-bottom: 2.5rem;
+}
+
+/* --- ESTRUTURA DOS CAMPOS (INPUTS) --- */
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cor-mutada);
+}
+
+.form-group input {
+    background-color: var(--bg-principal);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: var(--transicao);
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 12px rgba(240, 26, 26, 0.25);
+}
+
+.form-group input::placeholder {
+    color: #4b5563;
+}
+
+/* Linhas com múltiplos inputs (lado a lado) */
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Divisores de seção interna (Dados de Entrega) */
+.form-section-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--cor-destaque);
+    margin: 2rem 0 1.2rem 0;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.4rem;
+    text-align: left;
+}
+
+/* --- BOTÕES DE AÇÃO --- */
+.btn, .btn-submit {
+    width: 100%;
+    background: transparent;
+    border: 2px solid var(--cor-destaque);
+    color: #ffffff !important;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: var(--transicao);
+    margin-top: 1.5rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
+
+.btn:hover, .btn-submit:hover {
+    background: var(--cor-destaque);
+    box-shadow: 0 5px 25px rgba(240, 26, 26, 0.45);
+}
+
+/* Estilo preenchido (Botão de Cadastrar) */
+.btn-accent {
+    background: var(--cor-destaque) !important;
+    border: none;
+}
+
+.btn-accent:hover {
+    background-color: var(--cor-destaque-hover) !important;
+}
+
+/* --- RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 850px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .auth-container {
+        flex-direction: column;
+    }
+    
+    .auth-box:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .auth-box {
+        padding: 2.5rem 1.5rem;
+    }
+}

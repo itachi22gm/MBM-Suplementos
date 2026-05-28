@@ -2,59 +2,121 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBM Suplementos - Login / Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .auth-container {
-            display: flex;
-            background: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 800px;
-            margin: 4rem auto;
-        }
-        .auth-box { flex: 1; padding: 2.5rem; }
-        .auth-box:first-child { border-right: 1px solid #dee2e6; background: #f8f9fa; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_login.css">
 </head>
 <body>
-    <div class="container">
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">MBM <span>SUPLEMENTOS</span></div>
+            <a href="produtos.php" class="btn-cart">Voltar à Loja</a>
+        </div>
+    </header>
+
+    <main class="container">
         <div class="auth-container">
+            
             <div class="auth-box">
                 <h2>Já sou Cliente</h2>
-                <form action="produtos.html" method="GET">
+                <p class="auth-subtitle">Acesse sua conta para conferir seus pedidos.</p>
+                
+                <form action="login.php" method="POST">
                     <div class="form-group">
-                        <label>E-mail</label>
-                        <input type="email" placeholder="seu@email.com" required>
+                        <label for="login-email">E-mail</label>
+                        <input type="email" id="login-email" name="email" placeholder="seu@email.com" required>
                     </div>
+                    
                     <div class="form-group">
-                        <label>Senha</label>
-                        <input type="password" placeholder="Sua senha" required>
+                        <label for="login-senha">Senha</label>
+                        <input type="password" id="login-senha" name="senha" placeholder="Sua senha" required>
                     </div>
-                    <button type="submit" class="btn">Entrar</button>
+                    
+                    <button type="submit" class="btn-submit">Entrar na Conta</button>
                 </form>
             </div>
             
             <div class="auth-box">
                 <h2>Criar Conta</h2>
-                <form action="produtos.html" method="GET">
+                <p class="auth-subtitle">Cadastre-se rapidamente para realizar suas compras.</p>
+                
+                <form action="cadastrar.php" method="POST">
                     <div class="form-group">
-                        <label>Nome Completo</label>
-                        <input type="text" placeholder="Seu nome" required>
+                        <label for="cad-nome">Nome Completo</label>
+                        <input type="text" id="cad-nome" name="nome_completo" placeholder="Ex: João Silva" required>
                     </div>
-                    <div class="form-group">
-                        <label>E-mail</label>
-                        <input type="email" placeholder="seu@email.com" required>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cad-email">E-mail</label>
+                            <input type="email" id="cad-email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cad-senha">Crie uma Senha</label>
+                            <input type="password" id="cad-senha" name="senha" placeholder="Mínimo 6 dígitos" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Crie uma Senha</label>
-                        <input type="password" placeholder="Mínimo 6 dígitos" required>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cad-cpf">CPF (Apenas números)</label>
+                            <input type="text" id="cad-cpf" name="cpf" maxlength="11" placeholder="12345678910" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cad-tel">Telefone</label>
+                            <input type="tel" id="cad-tel" name="telefone" placeholder="(11) 99999-9999">
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-accent">Cadastrar e Entrar</button>
+
+                    <h3 class="form-section-title">Dados de Entrega</h3>
+                    
+                    <div class="form-row-cep">
+                        <div class="form-group">
+                            <label for="cad-cep">CEP</label>
+                            <input type="text" id="cad-cep" name="cep" maxlength="8" placeholder="12345678">
+                        </div>
+                        <div class="form-group">
+                            <label for="cad-rua">Endereço (Rua/Av)</label>
+                            <input type="text" id="cad-rua" name="endereco" placeholder="Av. Paulista">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 0 0 30%;">
+                            <label for="cad-num">Número</label>
+                            <input type="text" id="cad-num" name="numero" placeholder="123">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="cad-comp">Complemento</label>
+                            <input type="text" id="cad-comp" name="complemento" placeholder="Apto 42, Bloco B">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cad-bairro">Bairro</label>
+                            <input type="text" id="cad-bairro" name="bairro" placeholder="Centro">
+                        </div>
+                        <div class="form-group" style="flex: 1.5;">
+                            <label for="cad-cidade">Cidade</label>
+                            <input type="text" id="cad-cidade" name="cidade" placeholder="São Paulo">
+                        </div>
+                        <div class="form-group" style="flex: 0 0 20%;">
+                            <label for="cad-uf">UF</label>
+                            <input type="text" id="cad-uf" name="estado" maxlength="2" placeholder="SP">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit btn-accent">Finalizar Cadastro</button>
                 </form>
             </div>
+
         </div>
-    </div>
+    </main>
+
 </body>
 </html>
